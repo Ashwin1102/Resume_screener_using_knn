@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Clustering Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Clustering Result</h1>
+        
+        <div class="resume-details">
+            <p class="cluster-label">Your resume is classified as {{ resume_cluster }}</p>
+            <h2>Resume Details</h2>
+            <p>You can refer to the following links.</p>
+            
+            {% if resume_cluster == 'Data Science' %}
+            <h3>Study Material for Data Science</h3>
+            <ul>
+                <li><a href="https://www.coursera.org/learn/machine-learning">Machine Learning by Andrew Ng on Coursera</a></li>
+                <li><a href="https://www.datacamp.com/courses/python-for-data-science">Python for Data Science - DataCamp</a></li>
+                <li><a href="https://web.stanford.edu/~hastie/ElemStatLearn/">The Elements of Statistical Learning</a></li>
+                <li><a href="https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662">Python for Data Analysis by Wes McKinney</a></li>
+                <li><a href="https://towardsdatascience.com/">Towards Data Science</a></li>
+                <li><a href="https://www.kaggle.com/">Kaggle</a></li>
+            </ul>
+            {% elif resume_cluster == 'Java Developer' %}
+            <h3>Study Material for Java Developer</h3>
+            <ul>
+                <li><a href="https://docs.oracle.com/javase/tutorial/">Java Tutorials by Oracle</a></li>
+                <li><a href="https://www.baeldung.com/java-tutorial">Baeldung Java Tutorial</a></li>
+                <li><a href="https://www.oracle.com/technetwork/java/javase/documentation/index.html">Java Documentation</a></li>
+            </ul>
+            {% elif resume_cluster == 'HR' %}
+            <h3>Study Material for HR</h3>
+            <ul>
+                <li><a href="https://www.shrm.org/">Society for Human Resource Management (SHRM)</a></li>
+                <li><a href="https://www.hrci.org/">HR Certification Institute (HRCI)</a></li>
+                <li><a href="https://www.cipd.co.uk/">Chartered Institute of Personnel and Development (CIPD)</a></li>
+            </ul>
+            {% elif resume_cluster == 'Advocate' %}
+            <h3>Study Material for Advocate</h3>
+            <!-- Add study materials for Advocate role -->
+            <ul>
+                <li><a href="#">Study Material 1 for Advocate</a></li>
+                <li><a href="#">Study Material 2 for Advocate</a></li>
+                <li><a href="#">Study Material 3 for Advocate</a></li>
+            </ul>
+            {% else %}
+            <p>No specific links available for this category.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

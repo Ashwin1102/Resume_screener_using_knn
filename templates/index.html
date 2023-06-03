@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Screener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Upload your Resume</h1>
+    <form method="POST" enctype="multipart/form-data" action="/convert">
+        <input type="file" name="pdf_file" accept=".pdf" required>
+        <input type="submit" value="Categorize">
+    </form>
+    
+    <div class="extra-content">
+        <h2>Why Use Our Resume Screener?</h2>
+        <p>Our resume screener is designed to help you analyze and evaluate resumes efficiently. Here are a few reasons to use our tool:</p>
+        <ul>
+            <li>Save time: Our tool automates the resume screening process, saving you valuable time and effort.</li>
+            <li>Objective evaluation: The tool uses advanced algorithms to analyze resumes based on predefined criteria, ensuring a fair and unbiased screening process.</li>
+            <li>Efficient decision-making: By quickly identifying relevant resumes, you can make informed decisions and shortlist candidates effectively.</li>
+            <li>Improved accuracy: The tool leverages cutting-edge technologies to extract and analyze resume content accurately, minimizing errors and inconsistencies.</li>
+            <li>Streamlined workflow: With our resume screener, you can streamline your hiring process, organize resumes efficiently, and focus on qualified candidates.</li>
+        </ul>
+        
+        <h2>Tips for Uploading Your Resume</h2>
+        <p>Here are some tips to ensure a smooth and successful resume screening process:</p>
+        <ul>
+            <li>Upload a PDF version of your resume for the best compatibility and accurate analysis.</li>
+            <li>Ensure your resume is up-to-date and includes relevant information about your skills, experience, and qualifications.</li>
+            <li>Double-check for any typos, grammatical errors, or formatting issues in your resume to present a polished and professional document.</li>
+            <li>Keep your resume concise and highlight key accomplishments and experiences that align with the desired job position.</li>
+            <li>Avoid including sensitive personal information, such as your address or social security number, in your resume.</li>
+        </ul>
+    </div>
+</body>
+</html>
